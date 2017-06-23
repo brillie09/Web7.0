@@ -1,0 +1,53 @@
+h1 {
+    background: skyblue;
+    padding: 15px;
+    text-align: center;
+}
+
+.HorMenu {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #D5B0AC;
+    color: #402E2A;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.HorMenu>span {
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.HorMenu>span:hover {
+    background: #9CD08F;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.VerMenu {
+    padding-top: 10px;
+    text-align: left;
+    color: #402E2A;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.VerMenu p {
+    width: 30px;
+    background: #D5B0AC;
+    margin-top: 0px;
+    margin-bottom: -20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.VerMenu p:hover {
+    background: green;
+    color: white;
+    cursor: pointer;
+}
