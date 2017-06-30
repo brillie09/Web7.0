@@ -1,0 +1,7 @@
+20/6/17
+
+- Frontend: HTML, CSS, Js, ... sass, react
+html: noi dung web (5) - kp ngon ngu laptrinh
+css: cach trinh bay noi dung (3) - kp ngon ngu laptrinh
+js: web phan ung lai voi cac tuong tac cua user ra sao (ES7)
+----->>> HTML5

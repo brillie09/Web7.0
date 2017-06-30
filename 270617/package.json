@@ -1,0 +1,21 @@
+{
+  "name": "firstapp",
+  "version": "1.0.0",
+  "description": "questionApp",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Web7.0"
+  },
+  "author": "Brillie",
+  "license": "ISC"
+}

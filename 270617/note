@@ -1,0 +1,15 @@
+270617:
+Back-end: server, application, database
+
+NodeJS- trinh bien dich Js -> machinelanguage
+npmjs.com, nodejs.org - thu vien nodejs package
+
+*De chay file .js trong cmd: node + "FileName"
+*go vao cmd: npm init -> de tao file package.json
+*de cai 1 thu vien tu npm thi go vao cmd:
+  npm + install + "tenThuVien"
+
+  npm + install + "tenThuVien" + "--save"
+  -> de cai thu vien vua dc cai dat co anh huong toi proj, luu vao dependencies
+
+  -g: cai dat global cho may

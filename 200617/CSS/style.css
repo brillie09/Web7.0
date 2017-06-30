@@ -1,0 +1,62 @@
+<!--
+class selector la dau "."
+id selector la dau "#"
+nen dung class thay vi id vi id chi dung duoc 1 cai
+-->
+p{
+  color: red;
+  display: 5;
+}
+
+h1{
+  text-decoration: underline;
+}
+
+#blue_bg{
+  background: deepskyblue;
+  width: 300px;
+}
+
+.italic{
+  font-style: italic;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+[href]{
+  font-size: 60px;
+}
+
+[target="_blank"]{
+  color: green;
+}
+
+<!-- dau cach " " the hien quan he cha con, nhung cai li nam trong ul -->
+ul li{
+  text-decoration: line-through;
+}
+
+<!-- dau ">" the he quan he cha con truc tiep -->
+p > a{
+  font-family: "Comic Sans MS";
+}
+.foo > a{
+  font-family: "sans-serif";
+}
+
+p:hover{
+  background: yellow;
+}
+
+a:active{
+  color: magenta;
+}
+
+<!-- solid - hinh khep kin, dashed - gach, dotted - cham -->
+input:focus{
+  border: 1px solid red;
+  border-radius: 3px;
+  outline: 0 none;
+}
