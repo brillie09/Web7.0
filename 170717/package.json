@@ -1,0 +1,22 @@
+{
+  "name": "quyetde",
+  "version": "1.0.0",
+  "description": "170717",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "file-system": "^2.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Web7.0"
+  },
+  "author": "Brillie",
+  "license": "ISC"
+}
