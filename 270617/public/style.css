@@ -12,17 +12,33 @@ h1 {
     font-size: 10px;
 }
 
-.HorMenu>span {
+span {
     width: 100px;
     padding-top: 10px;
     padding-bottom: 10px;
     display: inline-block;
+	position: relative;
+	font-weight: bold;
+    font-size: 10px;
 }
 
-.HorMenu>span:hover {
+.HorMenu span div{
+	display: none;
+	position: absolute;
+	color: #402E2A;
+	background-color: #D5B0AC;
+	top: 30px;
+}
+
+.HorMenu span:hover {
     background: #9CD08F;
     color: #FFFFFF;
     cursor: pointer;
+}
+
+
+.HorMenu span:hover  div{
+	display: block;
 }
 
 .VerMenu {
@@ -47,3 +63,4 @@ h1 {
     color: white;
     cursor: pointer;
 }
+

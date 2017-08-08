@@ -1,0 +1,26 @@
+html{
+  background: #dcdcdc;
+}
+.header{
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 0;
+}
+.SearchBar{
+  position: relative;
+}
+.SearchBar input{
+  border-radius: 0;
+  padding-right: 30px;
+}
+
+.SearchBar .glyphicon{
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translate(0, -50%);
+  color: #ccc;
+}

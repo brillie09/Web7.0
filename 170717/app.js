@@ -5,14 +5,28 @@ const questionRouter = require('./module/question/question');
 const quyetdeRouter = require('./module/quyetde/quyetde');
 const fs = require('fs');
 const utilities = require('./module/utilities');
+const mongoose = require('mongoose');
+const config = require('./config.json');
 
 let app = express();
 let hbs = exhbs.create({});
 
 app.use(bodyParser.urlencoded({ extended: true }));
+
+//set view engine
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+//connect database
+mongoose.connect(config.connectionString, (err) => {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log('connect db success');
+    }
+})
+
+//require router
 app.use('/api/question', questionRouter);
 app.use('/quyetde', quyetdeRouter);
 

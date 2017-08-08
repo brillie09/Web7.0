@@ -2,33 +2,46 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs');
 const utilities = require('../utilities');
+const db = require('../question/questionSchema');
+
+const Question = db.Question;
 
 router.get('/', (req, res) => {
-    getRandomInt = (min, max) => {
-        return Math.floor(Math.random() * (max - min + 1) + min);
-    }
-    let random = getRandomInt(0, 4);
-    let questionList = utilities.getQuestionList();
-    let result = questionList[random];
-    question = {
-        id: random,
-        content: result.content
-    }
+  Question.random((err, question) => {
     res.render('quyetde', question);
+  })
 })
 
 router.post('/:id', (req, res) => {
-    console.log('day la vao id');
-    let questionList = utilities.getQuestionList();
-    let result = questionList[req.params.id];
+    var query = { _id : req.params.id };
+
     if (req.body.answer == 'yes') {
-        result.yes = result.yes ? result.yes + 1 : 1;
-    } else {
-        result.no = result.no ? result.no + 1 : 1;
+      //console.log(query);
+      //Question.findOneAndUpdate(query, { $inc: { yes: 1 } })
+      Question.findOne(query).exec((err, question) => {
+          question.yes = question.yes + 1;
+          question.save() ;
+          let result = {
+            content : question.content,
+            yes     : question.yes,
+            no      : question.no
+          }
+          return res.render('result', result);
+      });
+    } else if (req.body.answer == 'no') {
+      // console.log('no');
+      // Question.findOneAndUpdate(query, { $inc: { no: 1 } })
+      Question.findOne(query).exec((err, question) => {
+          question.no = question.no + 1;
+          question.save() ;
+          let result = {
+            content : question.content,
+            yes     : question.yes,
+            no      : question.no
+          }
+          return res.render('result', result);
+      });
     }
-    questionList[req.params.id] = result;
-    utilities.saveQuestionList(questionList);
-    res.render('result', questionList[req.params.id]);
 });
 
 module.exports = router;

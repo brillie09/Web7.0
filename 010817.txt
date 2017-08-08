@@ -1,0 +1,3 @@
+yarnpkg.com la 1 phien ban tot hon cua npm
+DOM - data object model
+cmd -> yarn global ad create-react-app
